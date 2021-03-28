@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Firebase Login</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login_div" class="main-div">
+      <h3>Login</h3>
+      <input type="email" placeholder="Email..." id="email_field" />
+      <input type="password" placeholder="Password..." id="password_field" />
+
+      <button onclick="login()">Login to Account</button>
+      <h3>Or</h3>
+      <button onclick="window.location.href='phone_authentication/index.html'">
+        Sign in with phone
+      </button>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3>
+      <p id="user_para">
+        Welcome to Firebase web login Example. You're currently logged in.
+      </p>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyASVEdnCPXyBxjObxTXdXtQMeeEYhxuhZ4",
+        authDomain: "chat-b15a7.firebaseapp.com",
+        projectId: "chat-b15a7",
+        storageBucket: "chat-b15a7.appspot.com",
+        messagingSenderId: "765745172411",
+        appId: "1:765745172411:web:defc6036f522aa10c3fe9e",
+        measurementId: "G-L9W9BDN95Z",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
